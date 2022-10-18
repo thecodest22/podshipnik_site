@@ -1,3 +1,7 @@
+body {
+    max-width: 1218px;
+}
+
 .div {
     border: solid red 2px;
     color: blue;
