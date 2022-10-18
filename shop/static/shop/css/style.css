@@ -1,8 +1,29 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 body {
+    margin: 0 auto;
     max-width: 1218px;
 }
 
-.div {
-    border: solid red 2px;
-    color: blue;
+.header-top {
+    display: flex;
+    align-items: center;
+    background-color: grey;
+}
+
+.main-menu {
+    display: inherit;
+    background-color: aquamarine;
+}
+
+.main-menu-link {
+    padding: 0 10px;
 }
