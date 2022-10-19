@@ -11,19 +11,32 @@ html {
 body {
     margin: 0 auto;
     max-width: 1218px;
+    font-family: sans-serif;
 }
 
 .header-top {
     display: flex;
     align-items: center;
-    background-color: grey;
+    padding: 0 25px;
+    height: 53px;
+    background-color: #303030;
 }
 
 .main-menu {
-    display: inherit;
+    display: flex;
+    align-items: center;
+    height: 100%;
     background-color: aquamarine;
 }
 
 .main-menu-link {
-    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    height: 100%;
+    border-bottom: #ec8025 solid 3px;
+}
+
+.main-menu-link:last-child {
+    margin: 0;
 }
