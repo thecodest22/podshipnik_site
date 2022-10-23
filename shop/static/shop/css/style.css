@@ -42,12 +42,22 @@ body {
     color: #000;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header-top {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 25px;
     height: 53px;
     background-color: #303030;
+    background-image: linear-gradient(to right, rgba(48, 48, 48, 1), rgba(48, 48, 48, 0.9)), url("../img/gears.svg");
+    background-size: 50%;
+    background-repeat: repeat-y;
+    background-position: right -10px bottom -30px;
+
 }
 
 .main-menu {
@@ -65,7 +75,6 @@ body {
     /*border-bottom: #ec8025 solid 3px;*/
     border-bottom: transparent solid 3px;
     color: #fff;
-    text-decoration: none;
 }
 
 .main-menu-link:hover {
@@ -78,4 +87,16 @@ body {
 
 .main-menu-link:last-child {
     margin: 0;
+}
+
+.user-account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 58px;
+}
+
+.user-account-icon {
+    height: 25px;
 }
