@@ -22,10 +22,10 @@
             <a href="{{ the_url }}" class="main-menu-link {% if active_page == the_url %}active{% endif %}">Главная</a>
             {% url "shop:about" as the_url %}
             <a href="{{ the_url }}" class="main-menu-link {% if active_page == the_url %}active{% endif %}">О&nbsp;нас</a>
-            <a href="#" class="main-menu-link">Оплата и&nbsp;доставка</a>
-            <a href="#" class="main-menu-link">Политика возврата</a>
-            <a href="#" class="main-menu-link">Гарантия</a>
-            <a href="#" class="main-menu-link">Контакты</a>
+            <a class="main-menu-link">Оплата и&nbsp;доставка</a>
+            <a class="main-menu-link">Политика возврата</a>
+            <a class="main-menu-link">Гарантия</a>
+            <a class="main-menu-link">Контакты</a>
           {% endwith %}
         </nav>
 
@@ -33,6 +33,29 @@
           <a href="#" ><img class="user-account-icon" src="{% static 'shop/img/user-login.svg' %}" alt=""></a>
           <a href="#" ><img class="user-account-icon" src="{% static 'shop/img/shopping-cart.svg' %}" alt=""></a>
         </div>
+      </div>
+
+      <div class="header-bottom">
+        <img class="logo-img" src="{% static 'shop/img/logo-tipa.png' %}" alt="Лого Подшипник">
+
+        <div class="slogan-and-search">
+          <span class="slogan light-color">Lorem ipsum dolor sit amet</span>
+
+          <input class="search-goods" autofocus type="search">
+        </div>
+
+        <div class="contacts">
+          <a href="tel:88000000000" class="tel">8-800-000-00-00</a>
+          <a href="mailto:test@test.ru" class="mailto">test@test.ru</a>
+          <span class="contact-description light-color">Отдел оборудования</span>
+        </div>
+
+        <div class="contacts">
+          <a href="tel:88000000000" class="tel">8-800-000-00-00</a>
+          <a href="mailto:test@test.ru" class="mailto">test@test.ru</a>
+          <span class="contact-description light-color">Отдел оборудования</span>
+        </div>
+
       </div>
     </div>
   </header>
