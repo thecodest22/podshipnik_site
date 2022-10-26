@@ -45,26 +45,35 @@ a {
     text-decoration: none;
 }
 
-.light-color {
-    color: #aaa;
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
-.header-container {
-    margin: 0 auto;
-    max-width: 1218px;
-}
-
-.header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 25px;
-    height: 53px;
+.header-top-wrap {
+    width: 100%;
     background-color: #303030;
     background-image: linear-gradient(to right, rgba(48, 48, 48, 1), rgba(48, 48, 48, 0.9)), url("../img/gears.svg");
     background-size: 50%;
     background-repeat: repeat-y;
     background-position: right -10px bottom -30px;
+}
+
+.light-color {
+    color: #aaa;
+}
+
+.header-top {
+    width: 1200px;
+    height: 53px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-menu {
@@ -95,19 +104,26 @@ a {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 58px;
+    /*width: 58px;*/
 }
 
 .user-account-icon {
     height: 25px;
 }
 
+.header-bottom-wrap {
+    width: 100%;
+    background: #f8f8f8;
+    box-shadow: 0 0 5px #303030;
+}
+
 .header-bottom {
+    width: 1200px;
     height: 100px;
+    margin: 0 auto;
+    padding: 0 25px;
     display: flex;
     align-items: center;
-    padding: 0 25px;
-    box-shadow: 0 0 5px #303030;
 }
 
 .logo-img {
@@ -138,4 +154,42 @@ a {
 
 .contacts:last-child {
     margin: 0;
+}
+
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: calc(100vh - 153px);
+    background: #f8f8f8;
+    /*box-shadow: 0 0 5px #303030;*/
+}
+/*.sidebar:after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: -6px;*/
+/*    width: calc(100% + 6px);*/
+/*    height: 6px;*/
+/*    background: #f8f8f8;*/
+/*}*/
+
+main {
+    margin-top: 153px;
+    height: 500px;
+    background: #fff;
+    margin-left: 300px;
+    position: relative;
+    /*box-shadow: 3px 0 3px #303030 inset;*/
+}
+
+main:before {
+    top: 0;
+    left: -1px;
+    height: calc(100%);
+    width: 1px;
+    content: '';
+    position: absolute;
+        box-shadow: 0 0 7px #303030 ;
 }

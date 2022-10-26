@@ -14,7 +14,7 @@
 </head>
 <body>
   <header class="header">
-    <div class="header-container">
+    <div class="header-top-wrap">
       <div class="header-top">
         <nav class="main-menu">
           {% with active_page=request.path_info %}
@@ -30,11 +30,13 @@
         </nav>
 
         <div class="user-account">
-          <a href="#" ><img class="user-account-icon" src="{% static 'shop/img/user-login.svg' %}" alt=""></a>
+{#          <a href="#" ><img class="user-account-icon" src="{% static 'shop/img/user-login.svg' %}" alt=""></a>#}
           <a href="#" ><img class="user-account-icon" src="{% static 'shop/img/shopping-cart.svg' %}" alt=""></a>
         </div>
       </div>
+    </div>
 
+    <div class="header-bottom-wrap">
       <div class="header-bottom">
         <img class="logo-img" src="{% static 'shop/img/logo-tipa.png' %}" alt="Лого Подшипник">
 
@@ -55,10 +57,13 @@
           <a href="mailto:test@test.ru" class="mailto">test@test.ru</a>
           <span class="contact-description light-color">Отдел оборудования</span>
         </div>
-
       </div>
     </div>
+
+  <div class="sidebar"></div>
   </header>
+
+<main></main>
 
 </body>
 </html>
