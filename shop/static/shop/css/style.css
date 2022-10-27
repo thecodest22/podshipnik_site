@@ -195,11 +195,11 @@ main::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -1px;
+    left: -2px;
     /*height: calc(100%);*/
-    height: 100%;
-    width: 1px;
-    box-shadow: 0 0 7px #303030 ;
+    height: 100vh;
+    width: 2px;
+    box-shadow: 0 0 5px #303030 ;
 }
 
 .sidebar ul {
@@ -250,4 +250,8 @@ main::before {
     line-height: 1.3em;
     text-align: center;
     text-transform: uppercase;
+}
+
+.index-categories-block:last-child {
+    border: none;
 }
