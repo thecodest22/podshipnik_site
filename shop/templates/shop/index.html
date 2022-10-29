@@ -13,11 +13,11 @@
   <title>Подшипник - Главная</title>
 </head>
 <body>
-  <header class="header">
-    <div class="header-top-wrap">
-      <div class="header-top">
-        <nav class="main-menu">
-          {% with active_page=request.path_info %}
+  <header class="header">  {# Общий хедер #}
+    <div class="header-top-wrap">  {# Враппер верхнего хедера. Нужен для бэкграунда на всю ширину экрана #}
+      <div class="header-top">  {# Сам верхний хедер. Нужен для задания горизонтальных паддингов. #}
+        <nav class="main-menu">  {# Главное меню. TODO Наполнение циклом и подчеркивание текущей страницы #}
+          {% with active_page=request.path_info %}  {# Временная реализация #}
             {% url "shop:main" as the_url %}
             <a href="{{ the_url }}" class="main-menu-link {% if active_page == the_url %}active{% endif %}">Главная</a>
             {% url "shop:about" as the_url %}
@@ -29,33 +29,38 @@
           {% endwith %}
         </nav>
 
-        <div class="user-account">
+        <div class="user-account">  {# Блок со ссылками в личку и корзину #}
 {#          <a href="#" ><img class="user-account-icon" src="{% static 'shop/img/user-login.svg' %}" alt=""></a>#}
-          <a href="#" ><img class="user-account-icon" src="{% static 'shop/img/shopping-cart.svg' %}" alt=""></a>
+          <a><img class="user-account-icon" src="{% static 'shop/img/shopping-cart.svg' %}" alt=""></a>
         </div>
       </div>
     </div>
 
-    <div class="header-bottom-wrap">
-      <div class="header-bottom">
-        <img class="logo-img" src="{% static 'shop/img/logo-tipa.png' %}" alt="Лого Подшипник">
+    <div class="header-bottom-wrap">  {# Нижний хедер-враппер. Нужен для бэкграунда на всю ширину экрана. #}
+      <div class="header-bottom">  {# Сам нижний хедер. Зададим горизонтальные паддинги. #}
 
-        <div class="slogan-and-search">
-          <span class="slogan light-color">Lorem ipsum dolor sit amet</span>
-
-          <input class="search-goods" autofocus type="search">
+        <div class="logo-container">  {# Контейнер для расположения логотипа #}
+          <img class="logo-img" src="{% static 'shop/img/bga-logo.svg' %}" alt="Лого БГА>">
         </div>
 
-        <div class="contacts">
-          <a href="tel:88000000000" class="tel">8-800-000-00-00</a>
-          <a href="mailto:test@test.ru" class="mailto">test@test.ru</a>
-          <span class="contact-description light-color">Отдел оборудования</span>
-        </div>
+        <div class="rest-container">  {# В этом контейнере все остальное - строка поиска, контакты #}
+          <div class="slogan-and-search">  {# Блок со слоганом и строкой поиска #}
+            <span class="slogan light-color">Lorem ipsum dolor sit amet</span>  {# Слоган #}
 
-        <div class="contacts">
-          <a href="tel:88000000000" class="tel">8-800-000-00-00</a>
-          <a href="mailto:test@test.ru" class="mailto">test@test.ru</a>
-          <span class="contact-description light-color">Отдел оборудования</span>
+            <input class="search-goods" autofocus type="search">  {# Строка поиска #}
+          </div>
+
+          <div class="contacts">  {# Блок с контактами #}
+            <a href="tel:88000000000" class="tel">8-800-000-00-00</a>
+            <a href="mailto:test@test.ru" class="mailto">test@test.ru</a>
+            <span class="contact-description light-color">Отдел оборудования</span>
+          </div>
+
+          <div class="contacts">
+            <a href="tel:88000000000" class="tel">8-800-000-00-00</a>
+            <a href="mailto:test@test.ru" class="mailto">test@test.ru</a>
+            <span class="contact-description light-color">Отдел оборудования</span>
+          </div>
         </div>
       </div>
     </div>
@@ -75,30 +80,41 @@
     <section class="index-categories">
       <h2>Категории</h2>
 
-      <div class="index-categories-block">
+      <a class="index-categories-block" href="javascript:void(0)">
         <h3>Запчасти и&nbsp;комплектующие</h3>
 
         <img src="{% static 'shop/img/wheel.png' %}" alt="Изображение запчастей" class="categories-image">
-      </div>
+      </a>
 
-      <div class="index-categories-block">
+      <a class="index-categories-block" href="javascript:void(0)">
         <h3>Режущий инструмент</h3>
 
         <img src="{% static 'shop/img/wheel.png' %}" alt="Изображение инструмента" class="categories-image">
-      </div>
+      </a>
 
-      <div class="index-categories-block">
+      <a class="index-categories-block" href="javascript:void(0)">
         <h3>Оборудование</h3>
 
         <img src="{% static 'shop/img/wheel.png' %}" alt="Изображение оборудования" class="categories-image">
-      </div>
+      </a>
 
-      <div class="index-categories-block">
+      <a class="index-categories-block" href="javascript:void(0)">
         <h3>Б/у оборудование</h3>
 
         <img src="{% static 'shop/img/wheel.png' %}" alt="Изображение оборудования" class="categories-image">
-      </div>
+      </a>
+    </section>
 
+    <section class="index-news">
+      <h2>Новости</h2>
+
+      <div class="index-news-block">
+        <h3 class="light-color">Поступил новый товар</h3>
+
+        <p class="news-description">
+          Электронный пневмоклапан
+        </p>
+      </div>
     </section>
   </main>
 
