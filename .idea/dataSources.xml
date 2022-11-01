@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Django default" uuid="32872558-59b1-4772-8f5e-c14361bf1b64">
+    <data-source source="LOCAL" name="podshipnik_site@localhost" uuid="bcef2b01-89d8-446a-8f8b-d7954405b69e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/podshipnik_site</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="db" uuid="d7e4e34a-7527-4df5-8288-7bc5b8a66482">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/podshipnik_site/settings.py</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:E:\YandexDisk\Yandex.Disk.Files\george_otradnaya\podshipnik_site\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\gusch\YandexDisk\Yandex.Disk.Files\george_otradnaya\podshipnik_site\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.39.2/sqlite-jdbc-3.39.2.jar</url>
+        </library>
+      </libraries>
     </data-source>
   </component>
 </project>
