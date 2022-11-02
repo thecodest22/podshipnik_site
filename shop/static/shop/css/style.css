@@ -1,12 +1,12 @@
 /*=========================== Правила ==========================*/
-@font-face {
-	font-family: 'Open Sans Regular';
-	src: url('../fonts/OpenSans-Regular.woff');
-	src: local('Open Sans Regular'), local('OpenSans-Regular'),
-		url('../fonts/OpenSans-Regular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
+/*@font-face {*/
+/*	font-family: 'Open Sans Regular';*/
+/*	src: url('../fonts/OpenSans-Regular.woff');*/
+/*	src: local('Open Sans Regular'), local('OpenSans-Regular'),*/
+/*		url('../fonts/OpenSans-Regular.woff') format('woff');*/
+/*	font-weight: normal;*/
+/*	font-style: normal;*/
+/*}*/
 
 @font-face {
     font-family: 'Open Sans SemiBold';
@@ -18,19 +18,15 @@
 	font-style: normal;
 }
 
-@font-face {
-    font-family: 'Open Sans Bold';
-    src: url('../fonts/OpenSans-Bold.woff');
-    src: local('Open Sans Bold'), local('OpenSans-Bold'),
-		url('../fonts/OpenSans-Bold.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-}
-
-/*:root {*/
-/*    --orange-border-color: #ec8025;*/
-/*    --grey-border-color: #ececec;*/
+/*@font-face {*/
+/*    font-family: 'Open Sans Bold';*/
+/*    src: url('../fonts/OpenSans-Bold.woff');*/
+/*    src: local('Open Sans Bold'), local('OpenSans-Bold'),*/
+/*		url('../fonts/OpenSans-Bold.woff') format('woff');*/
+/*	font-weight: bold;*/
+/*	font-style: normal;*/
 /*}*/
+
 
 /*========================== Общие свойства =======================*/
 html {
@@ -38,6 +34,10 @@ html {
     --orange-border-color: #ec8025;
     --grey-border-color: #ececec;
     --dark: #303030;
+    /*--gradient-top-color: #fcc018;*/
+    --gradient-top-color: #fcd618;
+    /*--gradient-bottom-color: #eb554b;*/
+    --gradient-bottom-color: #eb4b5e;
 }
 
 *,
@@ -55,7 +55,7 @@ body {
 }
 
 a {
-    color: #000;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -292,10 +292,20 @@ main::before {
 }
 
 /*------------------------- Секция Причины ------------------------*/
+.reasons h2 {
+    margin-bottom: 70px;
+}
+
+.reasons-section-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .reasons-block {
     position: relative;
     display: flex;
-    /*flex-wrap: wrap;*/
     flex-direction: column-reverse;
     align-items: center;
     width: 18%;
@@ -304,32 +314,62 @@ main::before {
     border: 3px solid var(--grey-border-color);
 }
 
-.reasons-block p {
-    /*margin: 0 auto;*/
-    /*position: relative;*/
-    /*z-index: 2;*/
-}
-
-.reasons-icon-container {
+.reasons-block::before {
+    content: '';
     position: absolute;
-    bottom: 50px;
+    bottom: 74px;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 60%;
-    height: 80%;
+    height: 3px;
     background-color: #fff;
 }
 
-.reasons-icon-01 {
+.reasons-block::after {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    z-index: 5;
     width: 60%;
     height: 100%;
-    background: linear-gradient(to right, yellow, red);
-    -webkit-mask-image: url('../img/reason-01.svg');
-    mask-image: url('../img/reason-01.svg');
+    background: linear-gradient(to bottom, var(--gradient-top-color), var(--gradient-bottom-color));
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position-x: center;
 }
 
+.b-01::after {
+    -webkit-mask-image: url('../img/reason-01.svg');
+    mask-image: url('../img/reason-01.svg');
+}
+
+.b-02::after {
+    -webkit-mask-image: url('../img/reason-02.svg');
+    mask-image: url('../img/reason-02.svg');
+}
+
+.b-03::after {
+    -webkit-mask-image: url('../img/reason-03.svg');
+    mask-image: url('../img/reason-03.svg');
+}
+
+.b-04::after {
+    -webkit-mask-image: url('../img/reason-04.svg');
+    mask-image: url('../img/reason-04.svg');
+}
+
+.b-05::after {
+    -webkit-mask-image: url('../img/reason-05.svg');
+    mask-image: url('../img/reason-05.svg');
+}
+
+footer {
+    margin-left: 300px;
+    padding: 100px 25px;
+    background: var(--dark);
+    background-image: linear-gradient(to right, rgba(48, 48, 48, 1), rgba(48, 48, 48, 0.95)), url("../img/gears.svg");
+    background-size: 70%;
+    background-repeat: repeat-y;
+    background-position: right -50px top -40px;
+}
